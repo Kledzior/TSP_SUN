@@ -1,0 +1,36 @@
+#ifndef TSPZACHLANNYdokl_H
+#define TSPZACHLANNYdokl_H
+
+#include "TSPbrute.h"
+#include <vector>
+
+using namespace std;
+
+class TSPzachlanny_dokl : public TSPbrute
+{
+    private:
+    // vector<vector<vector<double>>> graph;
+    // vector<int> cycle;
+    // int liczba;
+    // double dlugosc_min = numeric_limits<double>::max();
+    // int ilosc_cykli=0;
+    // vector<int> cycle_min;
+    //  vector<vector<vector<double>>> graph;
+    // vector<int> cycle;
+    // int liczba;
+    // double dlugosc_min = numeric_limits<double>::max();
+    // int ilosc_cykli=0;
+    // vector<int> cycle_min;
+    public:
+    //void hamilton(vector<vector<vector<double>>>& graph);
+    
+    bool is_Closest(int v, int w, const vector<vector<vector<double>>>& graph, const vector<int>& cycle);
+    void hamiltonianCycles(const vector<vector<vector<double>>>& graph,int choice2);
+    void printHamiltonianCycle(const vector<vector<vector<double>>>& graph, const vector<int>& cycle,int choice2);
+    double calculateHamiltonianCycleLength(const vector<vector<vector<double>>>& graph, const vector<int>& cycle);
+    bool isEdgeValid(int v, int w, const vector<vector<vector<double>>>& graph, const vector<int>& cycle);
+    void generateHamiltonianCycles(const vector<vector<vector<double>>>& graph, vector<int>& cycle, int pos,int liczba,int choice2);
+    //void TSP_wynik(const vector<vector<vector<double>>>& graph);
+};
+
+#endif //TSPZACHLANNYdokl_H
